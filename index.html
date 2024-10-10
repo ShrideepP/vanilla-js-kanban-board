@@ -7,5 +7,112 @@
 
     <link rel="stylesheet" href="./scss/main.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="kanban">
+      <div class="kanban__column">
+        <div class="kanban__column-header">
+          <h4>to-do</h4>
+          <span>0</span>
+        </div>
+
+        <div class="kanban__column-items">
+          <div class="kanban__column-item">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="kanban__column-item">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="kanban__column-item">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="kanban__column-footer">
+          <button type="button" class="kanban__add-button">
+            <img src="./assets/plus.svg" alt="Plus icon" />
+          </button>
+
+          <template>
+            <input
+              placeholder="Add a new to-do"
+              class="kanban__input"
+              name="to-do"
+              type="text"
+            />
+
+            <button type="button" class="kanban__check-button">
+              <img src="./assets/check.svg" alt="Checkmark icon" />
+            </button>
+          </template>
+        </div>
+      </div>
+
+      <div class="kanban__column">
+        <div class="kanban__column-header">
+          <h4>in progress</h4>
+          <span>0</span>
+        </div>
+
+        <div class="kanban__column-items">
+          <div class="kanban__column-item">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+          <div class="kanban__column-item">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="kanban__column-footer">
+          <button type="button" class="kanban__add-button">
+            <img src="./assets/plus.svg" alt="Plus icon" />
+          </button>
+
+          <template>
+            <input
+              placeholder="Add a new in-progress task"
+              class="kanban__input"
+              name="in-progress"
+              type="text"
+            />
+
+            <button type="button" class="kanban__check-button">
+              <img src="./assets/check.svg" alt="Checkmark icon" />
+            </button>
+          </template>
+        </div>
+      </div>
+
+      <div class="kanban__column">
+        <div class="kanban__column-header">
+          <h4>done</h4>
+          <span>0</span>
+        </div>
+
+        <div class="kanban__column-items">
+          <div class="kanban__column-item">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <div class="kanban__column-footer">
+          <button type="button" class="kanban__add-button">
+            <img src="./assets/plus.svg" alt="Plus icon" />
+          </button>
+
+          <template>
+            <input
+              placeholder="Add a new done task"
+              class="kanban__input"
+              name="done"
+              type="text"
+            />
+
+            <button type="button" class="kanban__check-button">
+              <img src="./assets/check.svg" alt="Checkmark icon" />
+            </button>
+          </template>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

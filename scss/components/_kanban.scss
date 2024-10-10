@@ -1,0 +1,73 @@
+@use "../base/index" as *;
+
+.kanban {
+  width: 100dvw;
+  height: 100dvh;
+  position: relative;
+  overflow-x: auto;
+  background-color: $night;
+
+  &__column {
+    width: 18rem;
+
+    &-header {
+      h4 {
+        font-size: 1.125rem;
+        color: $platinum;
+        font-weight: 400;
+        line-height: 1.15;
+        text-decoration: underline;
+      }
+
+      span {
+        font-size: 1rem;
+        color: $davys-gray;
+        font-weight: 400;
+        line-height: 1.15;
+        text-decoration: underline;
+      }
+    }
+
+    &-item {
+      border-radius: 0.25rem;
+      background-color: $eerie-black;
+
+      p {
+        font-size: 1rem;
+        color: $platinum;
+        font-weight: 400;
+        line-height: 1.6;
+        text-transform: lowercase;
+      }
+    }
+
+    &-footer {
+      button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.25rem;
+        border: 1px solid $eerie-black;
+
+        &:hover {
+          background-color: $eerie-black;
+        }
+      }
+
+      input {
+        flex: 1 1 0%;
+        font-size: 1rem;
+        color: $platinum;
+        font-weight: 400;
+        line-height: 1.15;
+        text-transform: lowercase;
+        border-radius: 0.25rem;
+        background-color: $eerie-black;
+
+        &::placeholder {
+          color: $davys-gray;
+        }
+      }
+    }
+  }
+}
