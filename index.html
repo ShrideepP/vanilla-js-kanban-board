@@ -13,113 +13,73 @@
     />
 
     <link rel="stylesheet" href="./scss/main.css" />
+
+    <script defer type="module" src="./scripts/main.js"></script>
   </head>
   <body>
     <main class="kanban">
-      <div class="kanban__column">
+      <div class="kanban__column" id="kanban__column-to-do">
         <div class="kanban__column-header">
           <h4>to-do</h4>
           <span>0</span>
         </div>
 
-        <div class="kanban__column-items">
-          <div class="kanban__column-item">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div class="kanban__column-item">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div class="kanban__column-item">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
+        <div class="kanban__column-items"></div>
 
         <div class="kanban__column-footer">
-          <button type="button" class="kanban__add-button">
+          <button type="button" data-column="to-do" class="kanban__add-button">
             <img src="./assets/plus.svg" alt="Plus icon" />
           </button>
-
-          <template>
-            <input
-              placeholder="Add a new to-do"
-              class="kanban__input"
-              name="to-do"
-              type="text"
-            />
-
-            <button type="button" class="kanban__check-button">
-              <img src="./assets/check.svg" alt="Checkmark icon" />
-            </button>
-          </template>
         </div>
       </div>
 
-      <div class="kanban__column">
+      <div class="kanban__column" id="kanban__column-in-progress">
         <div class="kanban__column-header">
           <h4>in progress</h4>
           <span>0</span>
         </div>
 
-        <div class="kanban__column-items">
-          <div class="kanban__column-item">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-          <div class="kanban__column-item">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
+        <div class="kanban__column-items"></div>
 
         <div class="kanban__column-footer">
-          <button type="button" class="kanban__add-button">
+          <button
+            type="button"
+            data-column="in-progress"
+            class="kanban__add-button"
+          >
             <img src="./assets/plus.svg" alt="Plus icon" />
           </button>
-
-          <template>
-            <input
-              placeholder="Add a new in-progress task"
-              class="kanban__input"
-              name="in-progress"
-              type="text"
-            />
-
-            <button type="button" class="kanban__check-button">
-              <img src="./assets/check.svg" alt="Checkmark icon" />
-            </button>
-          </template>
         </div>
       </div>
 
-      <div class="kanban__column">
+      <div class="kanban__column" id="kanban__column-done">
         <div class="kanban__column-header">
           <h4>done</h4>
           <span>0</span>
         </div>
 
-        <div class="kanban__column-items">
-          <div class="kanban__column-item">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
+        <div class="kanban__column-items"></div>
 
         <div class="kanban__column-footer">
-          <button type="button" class="kanban__add-button">
+          <button type="button" data-column="done" class="kanban__add-button">
             <img src="./assets/plus.svg" alt="Plus icon" />
           </button>
-
-          <template>
-            <input
-              placeholder="Add a new done task"
-              class="kanban__input"
-              name="done"
-              type="text"
-            />
-
-            <button type="button" class="kanban__check-button">
-              <img src="./assets/check.svg" alt="Checkmark icon" />
-            </button>
-          </template>
         </div>
       </div>
     </main>
+
+    <template id="column-item-template">
+      <div class="kanban__column-item">
+        <p></p>
+      </div>
+    </template>
+
+    <template id="column-input-template">
+      <input type="text" />
+
+      <button type="submit" class="kanban__check-button">
+        <img src="./assets/check.svg" alt="Checkmark icon" />
+      </button>
+    </template>
   </body>
 </html>

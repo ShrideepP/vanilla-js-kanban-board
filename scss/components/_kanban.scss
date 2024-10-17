@@ -8,7 +8,7 @@
   background-color: $night;
 
   &__column {
-    width: 18rem;
+    min-width: 18rem;
 
     &-header {
       h4 {
