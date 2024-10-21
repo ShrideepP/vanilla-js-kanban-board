@@ -1,0 +1,64 @@
+@use "../base/index" as *;
+
+.main-container {
+  display: flex;
+  column-gap: 2rem;
+
+  &__segment {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+    }
+
+    &-content-item {
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+    }
+
+    &-content-item-text {
+      flex: 1 1 0%;
+    }
+
+    &-footer {
+      display: flex;
+      align-items: center;
+      column-gap: 0.5rem;
+    }
+
+    &-footer-input {
+      flex: 1 1 0%;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    column-gap: 3rem;
+
+    &__segment {
+      row-gap: 0.75rem;
+
+      &-content {
+        row-gap: 0.75rem;
+      }
+
+      &-content-item {
+        column-gap: 0.75rem;
+      }
+
+      &-footer {
+        column-gap: 0.75rem;
+      }
+    }
+  }
+}

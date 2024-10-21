@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="./scss/main.css" />
+    <script defer src="./main.js"></script>
+  </head>
+
+  <body>
+    <main class="main-container">
+      <div data-segment="to-do" class="main-container__segment">
+        <div class="main-container__segment-header">
+          <h4 class="main-container__segment-header-title">to-do</h4>
+
+          <button
+            type="button"
+            data-segment="to-do"
+            class="main-container__segment-header-button"
+          >
+            <img alt="Plus sign" src="./assets/plus.svg" />
+          </button>
+        </div>
+
+        <hr class="main-container__segment-divider" />
+
+        <div data-segment="to-do" class="main-container__segment-content"></div>
+      </div>
+
+      <div data-segment="in-progress" class="main-container__segment">
+        <div class="main-container__segment-header">
+          <h4 class="main-container__segment-header-title">in-progress</h4>
+
+          <button
+            type="button"
+            data-segment="in-progress"
+            class="main-container__segment-header-button"
+          >
+            <img alt="Plus sign" src="./assets/plus.svg" />
+          </button>
+        </div>
+
+        <hr class="main-container__segment-divider" />
+
+        <div
+          data-segment="in-progress"
+          class="main-container__segment-content"
+        ></div>
+      </div>
+
+      <div data-segment="done" class="main-container__segment">
+        <div class="main-container__segment-header">
+          <h4 class="main-container__segment-header-title">done</h4>
+
+          <button
+            type="button"
+            data-segment="done"
+            class="main-container__segment-header-button"
+          >
+            <img alt="Plus sign" src="./assets/plus.svg" />
+          </button>
+        </div>
+
+        <hr class="main-container__segment-divider" />
+
+        <div data-segment="done" class="main-container__segment-content"></div>
+      </div>
+    </main>
+
+    <template class="main-container__segment-content-item-template">
+      <div draggable="true" class="main-container__segment-content-item">
+        <p class="main-container__segment-content-item-text"></p>
+
+        <button
+          type="button"
+          class="main-container__segment-content-item-button"
+        >
+          <img alt="Trash can icon" src="./assets/trash-2.svg" />
+        </button>
+      </div>
+    </template>
+
+    <template class="main-container__segment-footer-template">
+      <div class="main-container__segment-footer">
+        <button type="button" class="main-container__segment-footer-button">
+          <img alt="File icon" src="./assets/file.svg" />
+        </button>
+
+        <input
+          type="text"
+          placeholder="Enter text here..."
+          class="main-container__segment-footer-input"
+        />
+      </div>
+    </template>
+  </body>
+</html>

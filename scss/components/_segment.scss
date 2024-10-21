@@ -1,0 +1,96 @@
+@use "../base/index" as *;
+
+.main-container {
+  width: 100dvw;
+  min-height: 100dvh;
+  position: relative;
+  overflow-x: hidden;
+
+  &__segment {
+    min-width: 20rem;
+
+    &-header-title {
+      font-size: 1.125rem;
+      color: $davys-gray;
+      font-weight: 500;
+      line-height: 1.15;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    &-header-button {
+      position: relative;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+    }
+
+    &-divider {
+      border: none;
+      border-bottom: 1px solid $silver;
+    }
+
+    &-content-item {
+      position: relative;
+      cursor: move;
+      border-radius: 0.25rem;
+      background-color: $seasalt;
+
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    }
+
+    &-content-item.dragging {
+      opacity: 0.5;
+    }
+
+    &-content-item-text {
+      font-size: 1rem;
+      color: $eerie-black;
+      font-weight: 500;
+      line-height: 1.15;
+      text-transform: lowercase;
+    }
+
+    &-content-item-button {
+      position: relative;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+    }
+
+    &-footer {
+      border-radius: 0.25rem;
+      background-color: $seasalt;
+
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    }
+
+    &-footer-button {
+      position: relative;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      background: none;
+    }
+
+    &-footer-input {
+      font-size: 1rem;
+      color: $eerie-black;
+      font-family: "Roboto Condensed", sans-serif !important;
+      font-weight: 500;
+      line-height: 1.15;
+      text-transform: lowercase;
+      border: none;
+      outline: none;
+      background: none;
+    }
+  }
+}
